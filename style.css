@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffd6d6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Ẩn phần tử */
+.hidden {
+    display: none;
+}
+
+/* Giao diện lời xin lỗi đầu tiên */
+.center-message {
+    text-align: center;
+    padding-top: 20vh;
+    color: #c94f4f;
+}
+
+.center-message h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.center-message h2 {
+    font-size: 2em;
+    margin-top: 0.2em;
+}
+
+.forgive-text {
+    font-size: 1.2em;
+    color: #a94442;
+    margin-top: 1em;
+}
+
+/* Giao diện thứ hai */
+.floating-scene {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Câu xin lỗi bay */
+.floating-messages span {
+    position: absolute;
+    font-size: 1.2em;
+    color: white;
+    animation: float 15s infinite linear;
+    opacity: 0.9;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #ff8080;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-120vh) translateX(30px);
+        opacity: 0;
+    }
+}
+
+/* Vị trí ngẫu nhiên */
+.floating-messages span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.floating-messages span:nth-child(2) {
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.floating-messages span:nth-child(3) {
+    left: 30%;
+    animation-delay: 4s;
+}
+
+.floating-messages span:nth-child(4) {
+    left: 45%;
+    animation-delay: 1s;
+}
+
+.floating-messages span:nth-child(5) {
+    left: 60%;
+    animation-delay: 3s;
+}
+
+.floating-messages span:nth-child(6) {
+    left: 75%;
+    animation-delay: 5s;
+}
+
+.floating-messages span:nth-child(7) {
+    left: 85%;
+    animation-delay: 6s;
+}
+
+.floating-messages span:nth-child(8) {
+    left: 20%;
+    animation-delay: 2.5s;
+}
+
+.floating-messages span:nth-child(9) {
+    left: 70%;
+    animation-delay: 4.5s;
+}
+
+.floating-messages span:nth-child(10) {
+    left: 40%;
+    animation-delay: 3s;
+}
+
+.floating-messages span:nth-child(11) {
+    left: 10%;
+    animation-delay: 1.2s;
+}
+
+.floating-messages span:nth-child(12) {
+    left: 55%;
+    animation-delay: 4s;
+}
+
+.floating-messages span:nth-child(13) {
+    left: 65%;
+    animation-delay: 2s;
+}
+
+/* Trái tim rơi */
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: #ff4d88;
+    font-size: 1.5em;
+    animation: fall 6s infinite linear;
+}
+
+.heart::before {
+    content: "💗";
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}

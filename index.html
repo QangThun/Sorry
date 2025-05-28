@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em à, anh xin lỗi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Giao diện đầu tiên -->
+    <div id="first-scene" class="center-message">
+        <h1>Em à</h1>
+        <h2>Lỗi là ở anh...</h2>
+        <p>❤️</p>
+        <p class="forgive-text">Tha lỗi cho anh lần này nhé!</p>
+    </div>
+
+    <!-- Giao diện thứ hai -->
+    <div id="second-scene" class="floating-scene hidden">
+        <div class="floating-messages">
+            <!-- Các lời xin lỗi -->
+            <span>Thứ lỗi cho anh</span>
+            <span>Anh sai rồi</span>
+            <span>Em à</span>
+            <span>Baby à</span>
+            <span>Anh xin lỗi</span>
+            <span>Yêu em</span>
+            <span>🥺</span>
+            <span>❤️</span>
+            <span>😭</span>
+            <span>Tha lỗi anh nhé</span>
+            <span>🥹</span>
+            <span>Anh hứa sẽ sửa đổi</span>
+            <span>Chỉ cần em tha thứ</span>
+        </div>
+
+        <!-- Hiệu ứng trái tim rơi -->
+        <div class="hearts"></div>
+    </div>
+
+    <script>
+        // Sau 4 giây ẩn cảnh 1, hiện cảnh 2
+        setTimeout(() => {
+            document.getElementById('first-scene').classList.add('hidden');
+            document.getElementById('second-scene').classList.remove('hidden');
+        }, 4000);
+
+        // Tạo nhiều trái tim rơi
+        const heartsContainer = document.querySelector('.hearts');
+        for (let i = 0; i < 30; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            heartsContainer.appendChild(heart);
+        }
+    </script>
+</body>
+
+</html>
