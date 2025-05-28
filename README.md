@@ -1,1 +1,1 @@
-https://qangthun.github.io/Sorry/huhuhuh/index.html
+https://qangthun.github.io/Sorry/index.html
